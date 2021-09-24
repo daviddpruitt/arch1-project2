@@ -8,14 +8,14 @@ LDFLAGS		= -L/opt/ti/msp430_gcc/include
 CC              = msp430-elf-gcc
 AS              = msp430-elf-as
 
-all: led.elf 
+all: interrupt.elf 
 
 #additional rules for files
-led.elf: ${COMMON_OBJECTS} 
+interrupt.elf: ${COMMON_OBJECTS} 
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^ ../lib/libTimer.a
 
-load: led.elf
-	msp430loader.sh led.elf
+load: interrupt.elf
+	msp430loader.sh $^
 
 clean:
 	rm -f *.o *.elf
