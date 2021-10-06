@@ -12,6 +12,12 @@ Program            | Description
 7-button-polling   | Shows how to read the buttons using a loop
 8-button-interrupt | Shows how to read the buttons using interrupts
 
+## Some suggested things you may want to try
+
+* Change the LEDs and the buzzer together
+
+* Make the LED have verying levels of brightness instead of just on or off
+
 ## How to Use
 
 The Makefile in this direcory contains rules to run the Makefile in each demo directory. Use **make** in this directory to build all demo programs and the timer library. Once the programs are built, you can load the program onto the MSP430 by changing into the corresponding demo directory and using **make load**.
